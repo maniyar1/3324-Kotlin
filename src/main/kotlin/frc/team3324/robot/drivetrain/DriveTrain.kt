@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.SPI
 import edu.wpi.first.wpilibj.SpeedControllerGroup
 import edu.wpi.first.wpilibj.command.Subsystem
 import edu.wpi.first.wpilibj.drive.DifferentialDrive
-import frc.team3324.robot.Constants
+import frc.team3324.robot.util.Constants
 import frc.team3324.robot.drivetrain.commands.Drive
 
 
@@ -30,6 +30,7 @@ object DriveTrain : Subsystem() {
     init {
         rEncoder.setReverseDirection(true)
     }
+
     fun clearSensors() {
         gyro.reset()
         lEncoder.reset()
@@ -50,5 +51,7 @@ object DriveTrain : Subsystem() {
         flMotor.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Coast)
     }
 
-    override fun initDefaultCommand() { defaultCommand = Drive}
+    override fun initDefaultCommand() {
+        defaultCommand = Drive
+    }
 }

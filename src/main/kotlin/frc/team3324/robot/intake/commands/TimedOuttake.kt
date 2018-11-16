@@ -1,7 +1,6 @@
 package frc.team3324.robot.intake.commands
 
 import edu.wpi.first.wpilibj.command.Command
-import frc.team3324.robot.Robot
 import frc.team3324.robot.intake.Intake
 
 object TimedOuttake : Command("OuttakeAuto") {

@@ -2,10 +2,10 @@ package frc.team3324.robot.drivetrain.commands
 
 import edu.wpi.first.wpilibj.GenericHID
 import edu.wpi.first.wpilibj.command.Command
-import frc.team3324.robot.OI
+import frc.team3324.robot.util.OI
 import frc.team3324.robot.drivetrain.DriveTrain
 
-object Drive: Command("Drive") {
+object Drive : Command("Drive") {
     init {
         requires(DriveTrain)
     }

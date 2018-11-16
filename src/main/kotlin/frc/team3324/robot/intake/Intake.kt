@@ -3,7 +3,7 @@ package frc.team3324.robot.intake
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX
 import edu.wpi.first.wpilibj.SpeedControllerGroup
 import edu.wpi.first.wpilibj.command.Subsystem
-import frc.team3324.robot.Constants
+import frc.team3324.robot.util.Constants
 
 object Intake : Subsystem() {
     val leftIntakeMotor = WPI_VictorSPX(Constants.Intake.LEFT_INTAKE_MOTOR_PORT)

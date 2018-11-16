@@ -1,4 +1,4 @@
-package frc.team3324.robot
+package frc.team3324.robot.util
 
 object Constants {
     object Drivetrain {
@@ -22,8 +22,9 @@ object Constants {
         const val LEFT_INTAKE_MOTOR_PORT = 7
         const val RIGHT_INTAKE_MOTOR_PORT = 3
     }
+
     object Arm {
-       const val MOTOR_PORT_ARM_LEFT = 9
-       const val MOTOR_PORT_ARM_RIGHT = 8
+        const val MOTOR_PORT_ARM_LEFT = 9
+        const val MOTOR_PORT_ARM_RIGHT = 8
     }
 }

@@ -3,7 +3,7 @@ package frc.team3324.robot.drivetrain.commands
 import edu.wpi.first.wpilibj.Notifier
 import edu.wpi.first.wpilibj.command.Command
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
-import frc.team3324.robot.Constants
+import frc.team3324.robot.util.Constants
 import frc.team3324.robot.drivetrain.DriveTrain
 
 import jaci.pathfinder.Pathfinder
@@ -55,6 +55,7 @@ class JacisPathfinding(path: String) : Command("Jacis") {
         right.configurePIDVA(0.3, 0.0, 0.0, 1 / Constants.Drivetrain.LOW_GEAR_METERS_PER_SECOND, 0.0) // TODO: Tune these
         DriveTrain.setBrakeMode()
     }
+
     private var notifier = Notifier {
         val lOutput = left.calculate(DriveTrain.lEncoder.raw)
         val rOutput = right.calculate(DriveTrain.rEncoder.raw)
@@ -66,6 +67,7 @@ class JacisPathfinding(path: String) : Command("Jacis") {
         SmartDashboard.putNumber("rOutput", rOutput)
         DriveTrain.mDrive.tankDrive(-(lOutput + turn), -(rOutput - turn), false)
     }
+
     // Called just before this Command runs the first time
     override fun initialize() {
         notifier.startPeriodic(0.01)
@@ -91,6 +93,6 @@ class JacisPathfinding(path: String) : Command("Jacis") {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     override fun interrupted() {
-       DriveTrain.setCoastMode()
+        DriveTrain.setCoastMode()
     }
 }

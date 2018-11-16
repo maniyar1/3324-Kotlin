@@ -2,8 +2,7 @@ package frc.team3324.robot.arm.commands
 
 import edu.wpi.first.wpilibj.GenericHID
 import edu.wpi.first.wpilibj.command.Command
-import frc.team3324.robot.OI
-import frc.team3324.robot.Robot
+import frc.team3324.robot.util.OI
 import frc.team3324.robot.arm.Arm
 
 /**

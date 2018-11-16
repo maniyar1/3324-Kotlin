@@ -5,12 +5,14 @@ import edu.wpi.first.wpilibj.DriverStation
 import edu.wpi.first.wpilibj.TimedRobot
 import edu.wpi.first.wpilibj.command.Command
 import edu.wpi.first.wpilibj.command.Scheduler
-import frc.team3324.robot.arm.Arm
-import frc.team3324.robot.drivetrain.DriveTrain
-import frc.team3324.robot.intake.Intake
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
 import frc.team3324.robot.AutoGroups.*
+import frc.team3324.robot.arm.Arm
+import frc.team3324.robot.drivetrain.DriveTrain
+import frc.team3324.robot.intake.Intake
+import frc.team3324.robot.util.LimitSwitch
+import frc.team3324.robot.util.OI
 
 
 class Robot : TimedRobot() {
@@ -27,6 +29,7 @@ class Robot : TimedRobot() {
         Intake
         DriveTrain
         Arm
+        OI
 
         CameraServer.getInstance().startAutomaticCapture()
         CameraServer.getInstance().putVideo("Camera Output", 1280, 720)
@@ -40,8 +43,9 @@ class Robot : TimedRobot() {
     }
 
     override fun robotPeriodic() {
+        SmartDashboard.putBoolean("Limit Switch:", LimitSwitch.limitSwitch.get())
         Scheduler.getInstance().run()
-        CameraServer.getInstance().getVideo()
+        CameraServer.getInstance().video
     }
 
 
@@ -94,6 +98,7 @@ class Robot : TimedRobot() {
             CameraServer.getInstance().video
         }
     }
+
     override fun teleopPeriodic() {
 
     }

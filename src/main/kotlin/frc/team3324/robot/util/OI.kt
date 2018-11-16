@@ -1,4 +1,4 @@
-package frc.team3324.robot
+package frc.team3324.robot.util
 
 import edu.wpi.first.wpilibj.XboxController
 import edu.wpi.first.wpilibj.buttons.JoystickButton
