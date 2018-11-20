@@ -27,4 +27,11 @@ object Constants {
         const val MOTOR_PORT_ARM_LEFT = 9
         const val MOTOR_PORT_ARM_RIGHT = 8
     }
+    object Vision {
+        const val RESOLUTION_WIDTH = 360
+        const val RESOLUTION_HEIGHT = 240
+        const val kP = 1/(RESOLUTION_WIDTH/2)  // change this
+        const val kD = 1  // Change this (shouldn't be 1)
+        const val kI = 0.0001  // Change this
+    }
 }
