@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.XboxController
 import edu.wpi.first.wpilibj.buttons.JoystickButton
 import frc.team3324.robot.intake.commands.Intake
 import frc.team3324.robot.intake.commands.Outtake
+import frc.team3324.robot.drivetrain.commands.CenterCube
 
 object OI {
     val PRIMARY_CONTROLLER = XboxController(0)
@@ -29,5 +30,6 @@ object OI {
     init {
         SECONDARY_BUMPER_LEFT.whileHeld(Outtake)
         SECONDARY_BUMPER_RIGHT.whileHeld(Intake)
+	PRIMARY_BUMPER_RIGHT.whileHeld(CenterCube)
     }
 }

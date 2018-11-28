@@ -30,8 +30,8 @@ object Constants {
     object Vision {
         const val RESOLUTION_WIDTH = 360
         const val RESOLUTION_HEIGHT = 240
-        const val kP = 1/(RESOLUTION_WIDTH/2)  // change this
+        const val kP = 1.0/(RESOLUTION_WIDTH/2.0)  
         const val kD = 1  // Change this (shouldn't be 1)
-        const val kI = 0.0001  // Change this
+        const val kI = 0.00005  // Change this
     }
 }
