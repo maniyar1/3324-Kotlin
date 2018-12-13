@@ -2,10 +2,10 @@ package frc.team3324.robot.util
 
 object Constants {
     object Drivetrain {
-        const val FL_MOTOR_PORT = 4
-        const val BL_MOTOR_PORT = 2
-        const val FR_MOTOR_PORT = 6
-        const val BR_MOTOR_PORT = 8
+        const val FL_MOTOR_PORT = 6
+        const val BL_MOTOR_PORT = 4
+        const val FR_MOTOR_PORT = 0
+        const val BR_MOTOR_PORT = 2
         const val LEFT_ENCODER_PORT_A = 0 // Checked Buckeye
         const val LEFT_ENCODER_PORT_B = 1 // Checked Buckeye
         const val RIGHT_ENCODER_PORT_A = 2 // Checked Buckeye
@@ -32,6 +32,6 @@ object Constants {
         const val RESOLUTION_HEIGHT = 240
         const val kP = 1.0/(RESOLUTION_WIDTH/2.0)  
         const val kD = 1  // Change this (shouldn't be 1)
-        const val kI = 0.0001  // Change this
+        const val kI = 0.00005  // Change this
     }
 }

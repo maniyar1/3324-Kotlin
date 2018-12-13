@@ -24,7 +24,7 @@ object CenterCube : Command("CenterCube") { // This program centers a cube using
         integral = integral + error.toInt()
         val speed = (error.toDouble() * Vision.kP) + (integral.toDouble() * Vision.kI)
 	SmartDashboard.putNumber("Vision Speed", speed.toDouble())
-        DriveTrain.mDrive.arcadeDrive(0.0, speed, false)
+        DriveTrain.mDrive.arcadeDrive(0.0, speed)
         val Finished = (error < 10)
     }
 
